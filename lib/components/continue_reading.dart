@@ -1,8 +1,9 @@
+import 'package:bookshelf_app/components/reading_scroll_view.dart';
 import 'package:bookshelf_app/components/user_header.dart';
 import 'package:flutter/material.dart';
 
-class ReadingList extends StatelessWidget {
-  const ReadingList({Key? key}) : super(key: key);
+class ContinueReading extends StatelessWidget {
+  const ContinueReading({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +21,13 @@ class ReadingList extends StatelessWidget {
             greet: "Good Morning",
             imageProvider: AssetImage('assets/images/profile-pic.jpg'),
           ),
-          const SizedBox(height: 16),
-          Container(),
+          const SizedBox(height: 20),
+          Text(
+            "Continue Reading",
+            style: Theme.of(context).textTheme.headline2,
+          ),
+          const SizedBox(height: 10),
+          ReadingScrollView(),
         ],
       ),
     );

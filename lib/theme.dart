@@ -6,6 +6,7 @@ class BookShelfTheme {
   static const Color ink02 = Color(0xFF656f77);
   static const Color ink03 = Color(0xFFACB8C2);
   static const Color ink04 = Color(0xFFcdd9e3);
+  static const Color blueDolphin = Color(0xFF80D0F1);
   static const Color accentPalePurple = Color(0xFFF2E5FF);
   static const Color accentMistyRose = Color(0xFFFFE5E5);
   static const Color accentLinen = Color(0xFFFFF2E5);
@@ -25,27 +26,27 @@ class BookShelfTheme {
     ),
     bodyText2: GoogleFonts.poppins(
       fontSize: 12.0,
-      fontWeight: FontWeight.w600,
+      fontWeight: FontWeight.w400,
       color: ink01,
     ),
     caption: GoogleFonts.poppins(
-      fontSize: 10.0,
+      fontSize: 12.0,
       fontWeight: FontWeight.w600,
       color: ink01,
     ),
     headline1: GoogleFonts.poppins(
       fontSize: 32.0,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w600,
       color: ink01,
     ),
     headline2: GoogleFonts.poppins(
       fontSize: 24.0,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w600,
       color: ink01,
     ),
     headline3: GoogleFonts.poppins(
       fontSize: 20.0,
-      fontWeight: FontWeight.w700,
+      fontWeight: FontWeight.w600,
       color: ink01,
     ),
     headline4: GoogleFonts.poppins(

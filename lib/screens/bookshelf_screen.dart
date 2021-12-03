@@ -1,4 +1,4 @@
-import 'package:bookshelf_app/components/reading_list.dart';
+import 'package:bookshelf_app/components/continue_reading.dart';
 import 'package:flutter/material.dart';
 
 class BookshelfScreen extends StatelessWidget {
@@ -10,10 +10,8 @@ class BookshelfScreen extends StatelessWidget {
       body: ListView(
         scrollDirection: Axis.vertical,
         children: const [
-          ReadingList(),
-          SizedBox(
-            width: 16,
-          )
+          ContinueReading(),
+          SizedBox(height: 16),
         ],
       ),
     );
