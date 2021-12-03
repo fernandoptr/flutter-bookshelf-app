@@ -1,3 +1,4 @@
+import 'package:bookshelf_app/screens/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'theme.dart';
 
@@ -15,20 +16,8 @@ class Bookshelf extends StatelessWidget {
     return MaterialApp(
       title: 'Bookshelf',
       theme: theme,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Bookshelf',
-            style: theme.textTheme.headline3,
-          ),
-        ),
-        body: Center(
-          child: Text(
-            'Let\'s start the project 👷‍♂️',
-            style: theme.textTheme.headline1,
-          ),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: const BottomNavBar(),
     );
   }
 }

@@ -70,17 +70,14 @@ class BookShelfTheme {
           },
         ),
       ),
-      appBarTheme: const AppBarTheme(
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
-      ),
-      floatingActionButtonTheme: const FloatingActionButtonThemeData(
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.black,
-      ),
-      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-        selectedItemColor: Colors.green,
-      ),
+      // appBarTheme: const AppBarTheme(
+      //   foregroundColor: Colors.black,
+      //   backgroundColor: Colors.white,
+      // ),
+      // floatingActionButtonTheme: const FloatingActionButtonThemeData(
+      //   foregroundColor: Colors.white,
+      //   backgroundColor: Colors.black,
+      // ),
       textTheme: lightTextTheme,
     );
   }
