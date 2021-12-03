@@ -1,4 +1,4 @@
-import 'package:bookshelf_app/screens/bottom_nav_bar.dart';
+import 'package:bookshelf_app/components/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'theme.dart';
 

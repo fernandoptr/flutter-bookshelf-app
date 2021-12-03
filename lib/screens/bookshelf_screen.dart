@@ -1,3 +1,4 @@
+import 'package:bookshelf_app/components/reading_list.dart';
 import 'package:flutter/material.dart';
 
 class BookshelfScreen extends StatelessWidget {
@@ -6,11 +7,14 @@ class BookshelfScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          'Home',
-          style: Theme.of(context).textTheme.bodyText1,
-        ),
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: const [
+          ReadingList(),
+          SizedBox(
+            width: 16,
+          )
+        ],
       ),
     );
   }
