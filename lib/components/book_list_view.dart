@@ -1,6 +1,6 @@
 import 'package:bookshelf_app/components/book_thumbnail.dart';
 import 'package:bookshelf_app/models/book.dart';
-import 'package:bookshelf_app/screens/book_detail_screen.dart';
+import 'package:bookshelf_app/screens/book_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class BookListView extends StatefulWidget {
@@ -47,8 +47,8 @@ class _BookListViewState extends State<BookListView> {
         final book = filteredBooks[index];
         return GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => BookDetail(book: book)));
+            Navigator.pushNamed(context, BookDetails.nameRoute,
+                arguments: book);
           },
           child: BookThumbnail(book: book),
         );

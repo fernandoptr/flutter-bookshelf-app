@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AccountScreen extends StatelessWidget {
+  static const nameRoute = '/account';
+
   const AccountScreen({Key? key}) : super(key: key);
 
   @override

@@ -1,5 +1,6 @@
 import 'package:bookshelf_app/components/book_progress.dart';
 import 'package:bookshelf_app/models/book.dart';
+import 'package:bookshelf_app/screens/book_details_screen.dart';
 import 'package:flutter/material.dart';
 
 class ReadingBookListView extends StatelessWidget {
@@ -19,7 +20,12 @@ class ReadingBookListView extends StatelessWidget {
           const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       itemBuilder: (context, index) {
         final book = books[index + 4];
-        return BookProgress(book: book);
+        return GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, BookDetails.nameRoute,
+                  arguments: book);
+            },
+            child: BookProgress(book: book));
       },
       separatorBuilder: (context, index) {
         return const SizedBox(width: 10);

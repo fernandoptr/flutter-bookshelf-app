@@ -6,6 +6,8 @@ import 'package:bookshelf_app/models/book.dart';
 import 'package:flutter/material.dart';
 
 class BookshelfScreen extends StatefulWidget {
+  static const nameRoute = '/bookshelf';
+
   const BookshelfScreen({Key? key}) : super(key: key);
   @override
   State<BookshelfScreen> createState() => _BookshelfScreenState();

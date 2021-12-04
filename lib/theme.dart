@@ -6,6 +6,7 @@ class BookShelfTheme {
   static const Color ink02 = Color(0xFF393939);
   static const Color ink03 = Color(0xFFACB8C2);
   static const Color ink04 = Color(0xFFcdd9e3);
+  static const Color ink05 = Color(0x33cdd9e3);
   static const Color blueDolphin = Color(0xFF80D0F1);
   static const Color accentPalePurple = Color(0xFFF2E5FF);
   static const Color accentMistyRose = Color(0xFFFFE5E5);

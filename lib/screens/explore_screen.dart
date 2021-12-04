@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ExploreScreen extends StatelessWidget {
+  static const nameRoute = '/explore';
+
   const ExploreScreen({Key? key}) : super(key: key);
 
   @override

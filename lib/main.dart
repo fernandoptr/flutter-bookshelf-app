@@ -1,4 +1,8 @@
 import 'package:bookshelf_app/components/bottom_nav_bar.dart';
+import 'package:bookshelf_app/screens/account_screen.dart';
+import 'package:bookshelf_app/screens/book_details_screen.dart';
+import 'package:bookshelf_app/screens/bookshelf_screen.dart';
+import 'package:bookshelf_app/screens/explore_screen.dart';
 import 'package:flutter/material.dart';
 import 'theme.dart';
 
@@ -17,7 +21,13 @@ class Bookshelf extends StatelessWidget {
       title: 'Bookshelf',
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: const BottomNavBar(),
+      routes: {
+        BottomNavBar.nameRoute: (context) => const BottomNavBar(),
+        BookshelfScreen.nameRoute: (context) => const BookshelfScreen(),
+        ExploreScreen.nameRoute: (context) => const ExploreScreen(),
+        AccountScreen.nameRoute: (context) => const AccountScreen(),
+        BookDetails.nameRoute: (context) => const BookDetails(),
+      },
     );
   }
 }

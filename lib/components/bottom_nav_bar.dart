@@ -5,6 +5,7 @@ import 'package:bookshelf_app/theme.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatefulWidget {
+  static const nameRoute = '/';
   const BottomNavBar({Key? key}) : super(key: key);
 
   @override
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
   final _screens = [
-    BookshelfScreen(),
+    const BookshelfScreen(),
     const ExploreScreen(),
     const AccountScreen(),
   ];
