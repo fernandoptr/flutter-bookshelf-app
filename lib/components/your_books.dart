@@ -1,6 +1,6 @@
 import 'package:bookshelf_app/components/book_list_view.dart';
 import 'package:bookshelf_app/components/chip_categories.dart';
-import 'package:bookshelf_app/components/reading_scroll_view.dart';
+import 'package:bookshelf_app/components/reading_book_list_view.dart';
 import 'package:bookshelf_app/models/book.dart';
 import 'package:flutter/material.dart';
 

@@ -1,4 +1,4 @@
-import 'package:bookshelf_app/components/reading_scroll_view.dart';
+import 'package:bookshelf_app/components/reading_book_list_view.dart';
 import 'package:flutter/material.dart';
 
 class ChipCategories extends StatelessWidget {

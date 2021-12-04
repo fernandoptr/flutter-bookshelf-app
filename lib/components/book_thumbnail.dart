@@ -1,7 +1,6 @@
 import 'package:bookshelf_app/models/book.dart';
 import 'package:bookshelf_app/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class BookThumbnail extends StatelessWidget {

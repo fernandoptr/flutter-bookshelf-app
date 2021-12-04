@@ -3,72 +3,14 @@ import 'package:bookshelf_app/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
 
-class ReadingScrollView extends StatelessWidget {
-  final List<Book> books;
+class BookProgress extends StatelessWidget {
+  final Book book;
 
-  const ReadingScrollView({Key? key, required this.books}) : super(key: key);
+  const BookProgress({Key? key, required this.book}) : super(key: key);
 
   Color hexToColor(String code) {
     return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
   }
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics:
-          const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: [
-          ProgressBookCard(
-            bookTitle: books[0].title,
-            bookMeta: books[0].meta,
-            bookCover: books[0].bookCover,
-            chipCategory: books[0].category,
-            chipColor: hexToColor(books[0].accentColor),
-            progressValue: books[0].progressValue,
-          ),
-          const SizedBox(width: 10),
-          ProgressBookCard(
-            bookTitle: books[1].title,
-            bookMeta: books[1].meta,
-            bookCover: books[1].bookCover,
-            chipCategory: books[1].category,
-            chipColor: hexToColor(books[1].accentColor),
-            progressValue: books[1].progressValue,
-          ),
-          const SizedBox(width: 10),
-          ProgressBookCard(
-            bookTitle: books[2].title,
-            bookMeta: books[2].meta,
-            bookCover: books[2].bookCover,
-            chipCategory: books[2].category,
-            chipColor: BookShelfTheme.accentAliceBlue,
-            progressValue: books[2].progressValue,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class ProgressBookCard extends StatelessWidget {
-  final String bookTitle;
-  final String bookMeta;
-  final String bookCover;
-  final String chipCategory;
-  final Color chipColor;
-  final double progressValue;
-
-  const ProgressBookCard(
-      {Key? key,
-      required this.bookTitle,
-      required this.bookMeta,
-      required this.bookCover,
-      required this.chipCategory,
-      required this.chipColor,
-      required this.progressValue})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +31,7 @@ class ProgressBookCard extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.asset(
-                  bookCover,
+                  book.bookCover,
                   width: 70,
                 ),
               ),
@@ -101,14 +43,14 @@ class ProgressBookCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      bookTitle,
+                      book.title,
                       style: Theme.of(context).textTheme.headline4,
                       maxLines: 2,
                       softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
-                      bookMeta,
+                      book.meta,
                       style: Theme.of(context)
                           .textTheme
                           .bodyText2!
@@ -120,10 +62,10 @@ class ProgressBookCard extends StatelessWidget {
                     const SizedBox(height: 5),
                     Chip(
                       label: Text(
-                        chipCategory,
+                        book.category,
                         style: Theme.of(context).textTheme.caption,
                       ),
-                      backgroundColor: chipColor,
+                      backgroundColor: hexToColor(book.accentColor),
                     ),
                   ],
                 ),
@@ -135,7 +77,7 @@ class ProgressBookCard extends StatelessWidget {
             width: 50,
             height: 50,
             child: LiquidCircularProgressIndicator(
-              value: progressValue,
+              value: book.progressValue,
               valueColor:
                   const AlwaysStoppedAnimation(BookShelfTheme.blueDolphin),
               backgroundColor: Colors.white,
@@ -143,7 +85,7 @@ class ProgressBookCard extends StatelessWidget {
               borderWidth: 5.0,
               direction: Axis.vertical,
               center: Text(
-                "${(progressValue * 100).toStringAsFixed(0)} %",
+                "${(book.progressValue * 100).toStringAsFixed(0)} %",
                 style: Theme.of(context)
                     .textTheme
                     .caption!
