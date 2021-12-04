@@ -18,7 +18,6 @@ class YourBook extends StatelessWidget {
           "Your Book",
           style: Theme.of(context).textTheme.headline2,
         ),
-        const SizedBox(height: 10),
         const ChipCategories(),
         BookListView(books: books),
       ],

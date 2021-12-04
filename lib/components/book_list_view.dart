@@ -19,7 +19,7 @@ class BookListView extends StatelessWidget {
         return BookThumbnail(book: book);
       },
       separatorBuilder: (context, index) {
-        return const SizedBox(height: 16);
+        return const SizedBox(height: 10);
       },
       itemCount: books.length,
     );

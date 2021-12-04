@@ -15,7 +15,7 @@ class BookThumbnail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(width: 1.5, color: BookShelfTheme.ink04),
