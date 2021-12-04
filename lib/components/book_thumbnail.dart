@@ -70,7 +70,7 @@ class BookThumbnail extends StatelessWidget {
                     LinearPercentIndicator(
                       width: 180,
                       lineHeight: 6.0,
-                      percent: 0.5,
+                      percent: book.progressValue,
                       backgroundColor: BookShelfTheme.ink04,
                       progressColor: BookShelfTheme.blueDolphin,
                     ),
@@ -91,27 +91,6 @@ class BookThumbnail extends StatelessWidget {
           ),
         ],
       ),
-      // ignore: sized_box_for_whitespace
-      // Container(
-      //   width: 50,
-      //   height: 50,
-      //   child: LiquidCircularProgressIndicator(
-      //     value: book.progressValue,
-      //     valueColor:
-      //         const AlwaysStoppedAnimation(BookShelfTheme.blueDolphin),
-      //     backgroundColor: Colors.white,
-      //     borderColor: Colors.transparent,
-      //     borderWidth: 5.0,
-      //     direction: Axis.vertical,
-      //     center: Text(
-      //       "${(book.progressValue * 100).toStringAsFixed(0)} %",
-      //       style: Theme.of(context)
-      //           .textTheme
-      //           .caption!
-      //           .copyWith(color: BookShelfTheme.ink02),
-      //     ),
-      //   ),
-      // ),
     );
   }
 }

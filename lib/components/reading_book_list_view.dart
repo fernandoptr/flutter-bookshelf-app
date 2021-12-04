@@ -18,7 +18,7 @@ class ReadingBookListView extends StatelessWidget {
       physics:
           const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       itemBuilder: (context, index) {
-        final book = books[index];
+        final book = books[index + 4];
         return BookProgress(book: book);
       },
       separatorBuilder: (context, index) {
