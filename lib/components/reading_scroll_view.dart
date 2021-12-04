@@ -14,8 +14,6 @@ class ReadingScrollView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Color color1 = books[0].accentColor as Color;
-
     return SingleChildScrollView(
       physics:
           const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
@@ -78,7 +76,7 @@ class ProgressBookCard extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         border: Border.all(
-          width: 3,
+          width: 1.5,
           color: BookShelfTheme.ink04,
         ),
         borderRadius: BorderRadius.circular(15),
@@ -109,14 +107,17 @@ class ProgressBookCard extends StatelessWidget {
                       softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    const SizedBox(height: 5),
                     Text(
                       bookMeta,
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText2!
+                          .copyWith(fontSize: 10),
                       maxLines: 2,
                       softWrap: false,
                       overflow: TextOverflow.ellipsis,
                     ),
+                    const SizedBox(height: 5),
                     Chip(
                       label: Text(
                         chipCategory,

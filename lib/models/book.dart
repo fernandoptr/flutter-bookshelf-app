@@ -21,6 +21,8 @@ class Book {
     required this.bookCover,
     required this.accentColor,
     required this.progressValue,
+    required this.currentPage,
+    required this.pages,
   });
 
   String title;
@@ -30,6 +32,8 @@ class Book {
   String bookCover;
   String accentColor;
   double progressValue;
+  int currentPage;
+  int pages;
 
   factory Book.fromJson(Map<String, dynamic> json) => Book(
         title: json["title"],
@@ -39,6 +43,8 @@ class Book {
         bookCover: json["bookCover"],
         accentColor: json["accentColor"],
         progressValue: json["progressValue"].toDouble(),
+        currentPage: json["currentPage"],
+        pages: json["pages"],
       );
 
 //   Map<String, dynamic> toJson() => {

@@ -1,7 +1,7 @@
 import 'package:bookshelf_app/api/mock_bookshelf_service.dart';
-import 'package:bookshelf_app/components/chip_categories.dart';
 import 'package:bookshelf_app/components/continue_reading.dart';
 import 'package:bookshelf_app/components/user_header.dart';
+import 'package:bookshelf_app/components/your_books.dart';
 import 'package:bookshelf_app/models/book.dart';
 import 'package:flutter/material.dart';
 
@@ -25,15 +25,9 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
 
   void _scrollListener() {
     if (_controller.offset >= _controller.position.maxScrollExtent &&
-        !_controller.position.outOfRange) {
-      // ignore: avoid_print
-      print('reached the bottom');
-    }
+        !_controller.position.outOfRange) {}
     if (_controller.offset <= _controller.position.minScrollExtent &&
-        !_controller.position.outOfRange) {
-      // ignore: avoid_print
-      print('reached the top!');
-    }
+        !_controller.position.outOfRange) {}
   }
 
   @override
@@ -69,7 +63,7 @@ class _BookshelfScreenState extends State<BookshelfScreen> {
                     const SizedBox(height: 20),
                     ContinueReading(books: snapshot.data ?? []),
                     const SizedBox(height: 16),
-                    const ChipCategories(),
+                    YourBook(books: snapshot.data ?? []),
                   ],
                 ),
               ),

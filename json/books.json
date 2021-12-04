@@ -7,7 +7,9 @@
       "category": "Mystery",
       "bookCover": "assets/images/decagon-book.png",
       "accentColor": "#E5E5FF",
-      "progressValue": 0.76
+      "progressValue": 0.76,
+      "currentPage": 173,
+      "pages": 228
     },
     {
       "title": "How to Win Friends and Influence People",
@@ -16,7 +18,9 @@
       "category": "Self Help",
       "bookCover": "assets/images/influence-book.png",
       "accentColor": "#FFE5E5",
-      "progressValue": 0.42
+      "progressValue": 0.42,
+      "currentPage": 120,
+      "pages": 288
     },
 
     {
@@ -26,7 +30,9 @@
       "category": "NonFiction",
       "bookCover": "assets/images/subtle-book.png",
       "accentColor": "#FFF2E5",
-      "progressValue": 0.81
+      "progressValue": 0.81,
+      "currentPage": 181,
+      "pages": 224
     }
   ]
 }

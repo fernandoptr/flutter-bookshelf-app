@@ -9,9 +9,9 @@ class ChipCategories extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          "Your Book",
-          style: Theme.of(context).textTheme.headline2,
+        Container(
+          height: 10,
+          color: Colors.amber,
         ),
         const SizedBox(height: 10),
       ],
