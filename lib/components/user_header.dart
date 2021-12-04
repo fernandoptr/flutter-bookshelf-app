@@ -46,7 +46,6 @@ class UserHeader extends StatelessWidget {
         IconButton(
           // ignore: avoid_returning_null_for_void
           onPressed: () => null,
-          // 4 NOTE: Set the icon, size and color of the icon.
           icon: const Icon(Icons.add),
           iconSize: 30,
           color: BookShelfTheme.ink01,

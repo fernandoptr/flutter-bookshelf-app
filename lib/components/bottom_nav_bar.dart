@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
   final _screens = [
-    const BookshelfScreen(),
+    BookshelfScreen(),
     const ExploreScreen(),
     const AccountScreen(),
   ];

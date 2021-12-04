@@ -1,43 +1,52 @@
+import 'package:bookshelf_app/models/book.dart';
 import 'package:bookshelf_app/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_ns/liquid_progress_indicator.dart';
 
 class ReadingScrollView extends StatelessWidget {
-  const ReadingScrollView({Key? key}) : super(key: key);
+  final List<Book> books;
+
+  const ReadingScrollView({Key? key, required this.books}) : super(key: key);
+
+  Color hexToColor(String code) {
+    return Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+  }
 
   @override
   Widget build(BuildContext context) {
+    // Color color1 = books[0].accentColor as Color;
+
     return SingleChildScrollView(
       physics:
           const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: const [
+        children: [
           ProgressBookCard(
-            bookTitle: "The Decagon House Murders",
-            bookMeta: "By Yukito Ayatsuji · 2021",
-            bookCover: 'assets/images/decagon-book.png',
-            chipCategory: "Mystery",
-            chipColor: BookShelfTheme.accentLavender,
-            progressValue: 0.76,
+            bookTitle: books[0].title,
+            bookMeta: books[0].meta,
+            bookCover: books[0].bookCover,
+            chipCategory: books[0].category,
+            chipColor: hexToColor(books[0].accentColor),
+            progressValue: books[0].progressValue,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           ProgressBookCard(
-            bookTitle: "How to Win Friends and Influence People",
-            bookMeta: "By Dale Carnegie · 1998",
-            bookCover: 'assets/images/influence-book.png',
-            chipCategory: "Self-Help",
-            chipColor: BookShelfTheme.accentMistyRose,
-            progressValue: 0.42,
+            bookTitle: books[1].title,
+            bookMeta: books[1].meta,
+            bookCover: books[1].bookCover,
+            chipCategory: books[1].category,
+            chipColor: hexToColor(books[1].accentColor),
+            progressValue: books[1].progressValue,
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           ProgressBookCard(
-            bookTitle: "The Subtle Art of Not Giving a F*ck",
-            bookMeta: "By Mark Manson · 2016 ",
-            bookCover: 'assets/images/subtle-book.png',
-            chipCategory: "Non-Fiction",
+            bookTitle: books[2].title,
+            bookMeta: books[2].meta,
+            bookCover: books[2].bookCover,
+            chipCategory: books[2].category,
             chipColor: BookShelfTheme.accentAliceBlue,
-            progressValue: 0.81,
+            progressValue: books[2].progressValue,
           ),
         ],
       ),

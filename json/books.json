@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "title": "The Decagon House Murders",
+      "meta": "By Yukito Ayatsuji · 2021",
+      "description": "Seven students, members of their university's mystery club, decide to spend a week-long vacation on Tsunojima Island off the coast of Japan. Six months earlier the owner of the island was brutally murdered alongside his wife and housekeepers, and the case remains unsolved.",
+      "category": "Mystery",
+      "bookCover": "assets/images/decagon-book.png",
+      "accentColor": "#E5E5FF",
+      "progressValue": 0.76
+    },
+    {
+      "title": "How to Win Friends and Influence People",
+      "meta": "By Dale Carnegie · 1998",
+      "description": "The core idea is that you can change other people's behavior simply by changing your own. It teaches you the principles to better understand people, become a more likable person, improve relationships, win others over, and influence behavior through leadership.",
+      "category": "Self Help",
+      "bookCover": "assets/images/influence-book.png",
+      "accentColor": "#FFE5E5",
+      "progressValue": 0.42
+    },
+
+    {
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "meta": "By Mark Manson · 2016",
+      "description": "In this generation-defining self-help guide, a superstar blogger cuts through the crap to show us how to stop trying to be \"positive\" all the time so that we can truly become better, happier people.",
+      "category": "NonFiction",
+      "bookCover": "assets/images/subtle-book.png",
+      "accentColor": "#FFF2E5",
+      "progressValue": 0.81
+    }
+  ]
+}
