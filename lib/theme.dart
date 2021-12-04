@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class BookShelfTheme {
   static const Color ink01 = Color(0xFF191d21);
-  static const Color ink02 = Color(0xFF656f77);
+  static const Color ink02 = Color(0xFF393939);
   static const Color ink03 = Color(0xFFACB8C2);
   static const Color ink04 = Color(0xFFcdd9e3);
   static const Color blueDolphin = Color(0xFF80D0F1);

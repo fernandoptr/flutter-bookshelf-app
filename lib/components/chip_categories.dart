@@ -1,21 +1,21 @@
 import 'package:bookshelf_app/theme.dart';
 import 'package:flutter/material.dart';
 
-class ChipCategories extends StatefulWidget {
-  const ChipCategories({Key? key}) : super(key: key);
+class ChipCategory extends StatefulWidget {
+  const ChipCategory({Key? key}) : super(key: key);
 
   @override
-  State<ChipCategories> createState() => _ChipCategoriesState();
+  State<ChipCategory> createState() => _ChipCategoryState();
 }
 
-class _ChipCategoriesState extends State<ChipCategories> {
+class _ChipCategoryState extends State<ChipCategory> {
   static final List<String> _categories = [
     'All Books',
     'Fiction',
     'Non Fiction',
     'Self Help',
     'Documentary',
-    'Fantasy',
+    'Mistery',
     'Romance',
     'Action',
     'Comedy'
@@ -23,12 +23,12 @@ class _ChipCategoriesState extends State<ChipCategories> {
 
   static final List<String> _chipColor = [
     "#F2E5FF",
-    "#E5FFE5",
     "#FFE5E5",
+    "#E5FFE5",
     "#FFF2E5",
     "#E5FFFF",
-    "#E5F2FF",
     "#E5E5FF",
+    "#E5F2FF",
     "#FFE5FF",
     "#FFE5F2"
   ];
@@ -38,6 +38,7 @@ class _ChipCategoriesState extends State<ChipCategories> {
   }
 
   int? _value = 0;
+  String _selectedCategory = "Fiction";
 
   @override
   Widget build(BuildContext context) {
@@ -56,15 +57,21 @@ class _ChipCategoriesState extends State<ChipCategories> {
                 return ChoiceChip(
                   label: Text(
                     _categories[index],
-                    style: Theme.of(context).textTheme.caption,
                   ),
                   selected: _value == index,
-                  selectedColor: BookShelfTheme.blueDolphin,
+                  selectedColor: BookShelfTheme.ink02,
+                  labelStyle: Theme.of(context).textTheme.caption!.copyWith(
+                        color: _value == index
+                            ? Colors.white
+                            : BookShelfTheme.ink01,
+                      ),
                   backgroundColor: hexToColor(_chipColor[index]),
                   onSelected: (bool selected) {
                     setState(() {
                       _value = selected ? index : null;
+                      _selectedCategory = _categories[index];
                     });
+                    print(_selectedCategory);
                   },
                 );
               },
