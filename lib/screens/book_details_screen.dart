@@ -94,8 +94,21 @@ class BookDetails extends StatelessWidget {
                           const SizedBox(
                             height: 5,
                           ),
-                          Text(book.description,
-                              style: Theme.of(context).textTheme.bodyText2),
+                          Container(
+                            height: 250,
+                            child: RawScrollbar(
+                              isAlwaysShown: true,
+                              radius: const Radius.circular(10),
+                              thumbColor: BookShelfTheme.ink04,
+                              thickness: 5,
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.vertical,
+                                child: Text(book.description,
+                                    style:
+                                        Theme.of(context).textTheme.bodyText2),
+                              ),
+                            ),
+                          ),
                           const SizedBox(
                             height: 20,
                           ),

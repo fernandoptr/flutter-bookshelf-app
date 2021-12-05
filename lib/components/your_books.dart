@@ -21,8 +21,8 @@ class _YourBookState extends State<YourBook> {
     'History',
     'Mystery',
     'Romance',
-    'Action',
-    'Comedy'
+    'Poetry',
+    'Action'
   ];
 
   static final List<String> _chipColor = [
