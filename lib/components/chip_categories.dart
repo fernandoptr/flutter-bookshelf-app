@@ -71,7 +71,6 @@ class _ChipCategoryState extends State<ChipCategory> {
                       _value = selected ? index : null;
                       _selectedCategory = _categories[index];
                     });
-                    print(_selectedCategory);
                   },
                 );
               },

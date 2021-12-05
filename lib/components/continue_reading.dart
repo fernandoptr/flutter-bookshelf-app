@@ -17,7 +17,7 @@ class ContinueReading extends StatelessWidget {
           style: Theme.of(context).textTheme.headline2,
         ),
         const SizedBox(height: 10),
-        Container(
+        SizedBox(
           height: 141,
           child: ReadingBookListView(books: books),
         ),

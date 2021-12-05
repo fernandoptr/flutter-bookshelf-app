@@ -82,7 +82,6 @@ class _YourBookState extends State<YourBook> {
                           _value = selected ? index : null;
                           _selectedCategory = _categories[index];
                         });
-                        // print(_selectedCategory);
                       },
                     );
                   },

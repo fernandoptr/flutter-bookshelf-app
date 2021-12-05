@@ -1,17 +1,3 @@
-// To parse this JSON data, do
-//
-//     final book = bookFromJson(jsonString);
-
-// import 'dart:convert';
-
-// List<Book> bookFromJson(String str) =>
-//     List<Book>.from(json.decode(str).map((x) => Book.fromJson(x)));
-
-// String bookToJson(List<Book> data) =>
-//     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
-import 'package:flutter/cupertino.dart';
-
 class Book {
   Book({
     required this.title,
@@ -46,15 +32,4 @@ class Book {
         currentPage: json["currentPage"],
         pages: json["pages"],
       );
-
-//   Map<String, dynamic> toJson() => {
-//         "title": title,
-//         "meta": meta,
-//         "description": description,
-//         "category": category,
-//         "bookCover": bookCover,
-//         "accentColor": accentColor,
-//         "progressValue": progressValue,
-//       };
-// }
 }

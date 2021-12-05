@@ -94,7 +94,7 @@ class BookDetails extends StatelessWidget {
                           const SizedBox(
                             height: 5,
                           ),
-                          Container(
+                          SizedBox(
                             height: 250,
                             child: RawScrollbar(
                               isAlwaysShown: true,
